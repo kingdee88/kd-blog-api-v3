@@ -1,5 +1,6 @@
 module.exports = app => {
     const mongoose = app.mongoose
+    const Schema = mongoose.Schema
     
     const TagSchema = new mongoose.Schema({
         name:{						//标签名称

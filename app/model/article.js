@@ -1,5 +1,6 @@
 module.exports = app => {
     const mongoose = app.mongoose
+    const Schema = mongoose.Schema
 
     const ArticleSchema = new mongoose.Schema({
         author_id: {
@@ -59,7 +60,7 @@ module.exports = app => {
             default: Date.now
         }
     })
-    
+
     ArticleSchema
     .virtual('info')
     .get(function () {
